@@ -1,0 +1,9 @@
+version: "3"
+services:
+  ezopsDemoUI:
+    build:  .
+    ports:
+      --"4200:4200"
+    volumns:
+      -- "/app/node_modules"
+      -- ".:app"

@@ -1,0 +1,11 @@
+<jqxGrid #myGrid [theme]="'material'"
+    [width]="getWidth()" [source]="dataAdapter" [columns]="columns"
+    [pageable]="true" [autoheight]="true" [sortable]="true" 
+    [altrows]="true"  [enabletooltips]="true"  [editable]="true" 
+    [showtoolbar]="true" [rendertoolbar]="rendertoolbar"
+    (onCellendedit)="cellEndEditEvent($event)" [selectionmode]="'singlerow'">
+</jqxGrid>
+<div style="display: flex;">
+<app-titanic-charts [passengers]="dataAdapter.records"></app-titanic-charts>
+<app-titanic-bar-charts [passengers]="dataAdapter.records"></app-titanic-bar-charts>
+</div>
